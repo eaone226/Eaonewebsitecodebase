@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Navbar from "../Components/Navbar";
 import Herosection from "../Components/Herosection";
 import Courses from "../Components/Course";

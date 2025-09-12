@@ -28,6 +28,19 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
   e.preventDefault();
+   // Phone validation (10 digits, numbers only)
+  const phoneRegex = /^\d{10}$/;
+  if (!phoneRegex.test(formData.phone)) {
+    alert("Please enter a valid 10-digit phone number (numbers only).");
+    return;
+  }
+  // Email validation
+  const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  if (!emailRegex.test(formData.email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+ 
   setLoading(true);
 
   const fullPhone = `${countryCode} ${formData.phone}`;
