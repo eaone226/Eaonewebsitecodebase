@@ -1,7 +1,8 @@
 import React from "react";
 import { Star, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { courses } from "/Data/courseData";
+import { courses } from "../data/courseData"; // external data
 
 const Courses = ({ showTitle = true, excludeId = null }) => {
   // Filter out the course with excludeId (current course)
@@ -9,23 +10,68 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
     ? courses.filter((course) => course.id !== excludeId)
     : courses;
 
+  // Animation variants for cards
+  const cardVariants = [
+    {
+      hidden: { opacity: 0, x: -150 },
+      visible: {
+        opacity: 1,
+        x: 0,
+        transition: { duration: 0.8, ease: "easeOut" },
+      },
+    },
+    {
+      hidden: { opacity: 0, scale: 0.5 },
+      visible: {
+        opacity: 1,
+        scale: 1,
+        transition: { duration: 0.8, ease: "easeOut" },
+      },
+    },
+    {
+      hidden: { opacity: 0, x: 150 },
+      visible: {
+        opacity: 1,
+        x: 0,
+        transition: { duration: 0.8, ease: "easeOut" },
+      },
+    },
+  ];
+
   return (
     <section id="course" className="mt-[80px] bg-[#f7f7f7] px-[120px]">
       <div className="container mx-auto text-center">
-        {showTitle && <h2 className="text-[36px] font-bold mb-[40px]">Courses</h2>}
+        {showTitle && (
+          <motion.h2
+            className="text-[36px] font-bold mb-[40px]"
+            initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, ease: "backOut" }}
+            viewport={{ once: true }}
+          >
+            Courses
+          </motion.h2>
+        )}
 
+        {/* Flex Cards */}
         <div className="flex flex-wrap justify-center gap-[13px]">
-          {displayedCourses.map((course) => (
-            <div
+          {displayedCourses.map((course, index) => (
+            <motion.div
               key={course.id}
               className="relative w-[332px] h-[442px] rounded-2xl overflow-hidden shadow-md group cursor-pointer"
+              variants={cardVariants[index % cardVariants.length]} // rotate animations
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
             >
+              {/* Course Image */}
               <img
                 src={course.img}
                 alt={course.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
+              {/* Overlay */}
               <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
                 <div className="p-4 w-full text-left">
                   <h3 className="text-white text-[24px] font-bold drop-shadow-lg group-hover:-translate-y-10 transition-transform duration-500">
@@ -54,6 +100,7 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
                 </div>
               </div>
 
+              {/* Title visible before hover */}
               {!excludeId && (
                 <div className="absolute bottom-4 left-4 right-4 text-left mb-[20px] pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
                   <h3 className="text-white text-[24px] font-bold drop-shadow-lg">
@@ -61,7 +108,7 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
                   </h3>
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

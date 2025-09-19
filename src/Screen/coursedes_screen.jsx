@@ -1,3 +1,4 @@
+
 import React, { useState,useRef } from "react";
 import { Star, ChevronDown } from "lucide-react";
 import Courses from "../Components/Course";
@@ -250,4 +251,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
- 
