@@ -3,14 +3,16 @@ import Aboutscreen from "./Screen/Aboutscreen";
 import LandingPage from "./Screen/landingpage";
 import Contactscreen from "./Screen/Contactscreen";
 import ScrollToTop from "./Components/ScrollToTop";
+import CourseLanding from "./Screen/coursedescriptionscreen";
 const App = () => {
     return (
         <Router>
             <ScrollToTop></ScrollToTop>
             <Routes>
-                <Route path="/" element={<LandingPage />} />
+                <Route path="/" element={<CourseLanding />} />
                 <Route path="/about" element={<Aboutscreen />} />
                 <Route path="/contact" element={<Contactscreen />} />
+                <Route path="/courseland" element={<CourseLanding />} />
             </Routes>
         </Router>
     );

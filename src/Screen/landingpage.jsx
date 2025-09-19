@@ -8,7 +8,6 @@ import Services from "../Components/Services";
 import Banner from "../Components/Banner";
 import About from "../Components/About";
 import Footer from "../Components/Footer";
-
 const LandingPage = () => {
     React.useEffect(() => {
         if (window.location.hash) {
