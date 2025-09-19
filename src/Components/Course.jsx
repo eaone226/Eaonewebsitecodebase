@@ -1,7 +1,7 @@
 import React from "react";
 import { Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { courses } from "../data/courseData";
+import { courses } from "../../public/Data/courseData";
 
 const Courses = ({ showTitle = true, excludeId = null }) => {
   // Filter out the course with excludeId (current course)

@@ -1,4 +1,3 @@
-
 export const courses = [
   {
     id: "graphic-design",
