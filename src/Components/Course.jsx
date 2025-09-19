@@ -1,40 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Star, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { courses } from "../data/courseData"; // external data
-
 const Courses = ({ showTitle = true, excludeId = null }) => {
-  // Filter out the course with excludeId (current course)
+  const [courses, setCourses] = useState([]);
+
+  // Load JSON from public/data/courseData.json
+  useEffect(() => {
+    fetch("/Data/coursedata.json")
+      .then((res) => res.json())
+      .then((data) => setCourses(data))
+      .catch((err) => console.error("Error loading courses:", err));
+  }, []);
+
+  // Filter out the course with excludeId (if needed)
   const displayedCourses = excludeId
     ? courses.filter((course) => course.id !== excludeId)
     : courses;
 
-  // Animation variants for cards
+  // Animation variants
   const cardVariants = [
     {
       hidden: { opacity: 0, x: -150 },
-      visible: {
-        opacity: 1,
-        x: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
-      },
+      visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
     },
     {
       hidden: { opacity: 0, scale: 0.5 },
-      visible: {
-        opacity: 1,
-        scale: 1,
-        transition: { duration: 0.8, ease: "easeOut" },
-      },
+      visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
     },
     {
       hidden: { opacity: 0, x: 150 },
-      visible: {
-        opacity: 1,
-        x: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
-      },
+      visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
     },
   ];
 
@@ -53,18 +49,17 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
           </motion.h2>
         )}
 
-        {/* Flex Cards */}
         <div className="flex flex-wrap justify-center gap-[13px]">
           {displayedCourses.map((course, index) => (
             <motion.div
               key={course.id}
               className="relative w-[332px] h-[442px] rounded-2xl overflow-hidden shadow-md group cursor-pointer"
-              variants={cardVariants[index % cardVariants.length]} // rotate animations
+              variants={cardVariants[index % cardVariants.length]}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              {/* Course Image */}
+              {/* Image */}
               <img
                 src={course.img}
                 alt={course.title}
@@ -100,7 +95,7 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
                 </div>
               </div>
 
-              {/* Title visible before hover */}
+              {/* Title before hover */}
               {!excludeId && (
                 <div className="absolute bottom-4 left-4 right-4 text-left mb-[20px] pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
                   <h3 className="text-white text-[24px] font-bold drop-shadow-lg">
