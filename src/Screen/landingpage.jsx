@@ -22,7 +22,7 @@ const LandingPage = () => {
         <div className="bg-[#f7f7f7]">
             <Navbar />
             <Herosection />
-            <Courses />
+            <Courses showTitle={true}/>
             <Features />
             <Services />
             <Banner />

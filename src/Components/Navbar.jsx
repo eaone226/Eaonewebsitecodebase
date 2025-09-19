@@ -4,7 +4,6 @@ import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
-  // Variants for staggered animation of nav links
   const navLinksVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: (i) => ({
@@ -14,7 +13,6 @@ const Navbar = () => {
     }),
   };
 
-  // Reusable link styles with hover underline effect
   const linkClasses =
     "relative text-[#F7F7F7] font-bold text-[16px] cursor-pointer " +
     "hover:text-[#d2f801] transition-colors duration-300 " +
@@ -30,21 +28,18 @@ const Navbar = () => {
     { label: "Contact", link: "/contact", type: "router" },
   ];
 
-  // State for looping logo color
   const [showYellow, setShowYellow] = React.useState(false);
   React.useEffect(() => {
     const interval = setInterval(() => {
       setShowYellow((prev) => !prev);
-    }, 3000); // Slowed down to 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <nav
-      className="bg-[#0367fc] px-[120px] h-[62px] w-full fixed top-0 left-0 z-50 shadow-md"
-    >
+    <nav className="bg-[#0367fc] px-[120px] h-[62px] w-full fixed top-0 left-0 z-50 shadow-md">
       <div className="flex justify-between items-center h-full">
-        {/* Logo - loop color */}
+        {/* Logo */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -52,7 +47,7 @@ const Navbar = () => {
           className="relative w-[100px] h-[64px] cursor-pointer"
         >
           <motion.img
-            src="Ecialogo-white.png"
+            src="/Ecialogo-white.png"
             alt="Ecialogo"
             animate={{ opacity: showYellow ? 0 : 1 }}
             transition={{ duration: 0.5 }}
@@ -60,7 +55,7 @@ const Navbar = () => {
             style={{ zIndex: showYellow ? 0 : 1 }}
           />
           <motion.img
-            src="Ecialogo-yellow.png"
+            src="/Ecialogo-yellow.png"
             alt="Ecialogo"
             animate={{ opacity: showYellow ? 1 : 0 }}
             transition={{ duration: 0.5 }}
