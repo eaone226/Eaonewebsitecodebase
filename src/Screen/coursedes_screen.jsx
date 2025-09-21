@@ -4,7 +4,6 @@ import Courses from "../Components/Course";
 import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
 const HeroSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
@@ -191,6 +190,14 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
+      </div>
+      
+      {/* Courses */}
+      <div className="px-[120px] pb-16">
+        <h1 className="text-[40px] font-bold text-[#0367fc] text-center mb-8">
+          Others in demand training
+        </h1>
+        <Courses showTitle={false} excludeId={courseId} />
       </div>
 
       {/* FAQ */}
