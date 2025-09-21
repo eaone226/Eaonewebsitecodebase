@@ -64,6 +64,56 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      {/* About Course Section */}
+      <div className="py-10 bg-[#F7F7F7] px-[120px]">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-[40px] font-bold text-blue-700 mb-4">
+            About Course :
+          </h2>
+          <p className="text-[#0a0908] w-[1040px] text-[24px] leading-relaxed">
+            Our Graphic Designing Course is designed to help you master the art
+            of visual communication and creative storytelling. Learn essential
+            design principles, popular design tools, and practical skills to
+            create stunning visuals for brands, social media, marketing, and
+            more. This course empowers you to turn your ideas into professional
+            designs and build a portfolio that showcases your unique style and
+            creativity.
+          </p>
+          </div>
+          {/* Course Info Row */}
+          <div className="flex justify-center mt-10">
+            <div className="flex flex-row bg-[#0367fc] font-bold items-center px-[20px] text-[#f7f7f7] h-[60px] rounded-md w-[900px]">
+              <h1 className="text-[20px] ">
+                <span className="text-[#d2f801] font-black text-[24px]">
+                  Duration{" "}
+                </span>
+                : 3 Months <span className="text-[30px] ml-[20px]">|</span>
+              </h1>
+
+              <h1 className="text-[20px] ml-[20px]">
+                <span className="text-[#d2f801]  font-black text-[24px]">
+                  Mode{" "}
+                </span>
+                : Online <span className="text-[30px] ml-[20px]">|</span>
+              </h1>
+
+              <h1 className="text-[20px] ml-[20px]">
+                <span className="text-[#d2f801] font-black text-[24px]">
+                  Level{" "}
+                </span>
+                : Beginner <span className="text-[30px] ml-[20px]">|</span>
+              </h1>
+
+              <h1 className="text-[20px] ml-[20px] mt-1">
+                <span className="text-[#d2f801]  font-black  text-[24px]">
+                  Certificate{" "}
+                </span>
+                : Yes
+              </h1>
+            </div>
+          </div>
+        </div>
+  
 
       {/* Skills Section */}
       <div className="px-[120px] mt-12">
@@ -83,6 +133,28 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
+      </div>
+       {/* What will you learn / What will you get */}
+      <div className="mt-16 bg-[#0367fc]/30 border mx-[120px] px-[80px] text-[#0367fc]/50 rounded-lg p-8">
+        <h2 className="text-[40px] font-bold text-[#0367fc] mb-4">
+          What will you learn
+        </h2>
+        <ul className="list-disc list-inside space-y-2 text-[#0a0908] text-[24px] font-bold text-lg">
+          <li>Design professional logos and branding materials</li>
+          <li>Build a strong portfolio with your best design work</li>
+          <li>
+            Get hands-on experience with Photoshop, Illustrator, and Canva
+          </li>
+        </ul>
+
+        <h2 className="text-[40px] font-bold text-[#0367fc] mt-6 mb-4">
+          What will you Get
+        </h2>
+        <ul className="list-disc list-inside space-y-2 font-bold text-[#0a0908]  text-[24px]">
+          <li>Real-time projects and assignments</li>
+          <li>Portfolio support to showcase your work</li>
+          <li>Career and freelance guidance</li>
+        </ul>
       </div>
 
       {/* Reviews Section */}
