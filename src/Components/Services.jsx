@@ -92,7 +92,7 @@ const Services = () => {
               {/* view button */}
              <div className="flex justify-center mt-[30px]">
              <a href="#" className="text-black text-[16px] w-[124px] font-bold flex items-center gap-1 whitespace-nowrap hover:text-[#0367fc]"  >
-                View Course <ArrowRight className="mt-1" />
+                View Service <ArrowRight className="mt-1" />
              </a>
           </div>
             </div>
