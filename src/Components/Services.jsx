@@ -44,7 +44,7 @@ const Services = () => {
       </button>
 
       {/* Cards Grid */}
-      <div className="flex flex-col px-[120px] md:flex-row justify-center items-stretch gap-6">
+      <div className="flex flex-col px-[120px]  md:flex-row justify-center items-stretch gap-6">
         {services.slice(startIndex, startIndex + 3).map((service, index) => (
           <div
             key={index}

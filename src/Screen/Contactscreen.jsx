@@ -4,7 +4,7 @@ import Mapscreen from "../Components/Mapscreen";
 import Footer from "../Components/Footer"
 import ContactForm from "../Components/contactform";
 const Contactscreen = () =>{
-  
+  const text = encodeURIComponent("Hello, I want to register to the course.");
      return(
           <div>
         <Navbar />
@@ -33,6 +33,7 @@ const Contactscreen = () =>{
         <h1 className="text-[#0367fc] text-[40px] mt-[40px] mb-2 font-bold">Get in Touch</h1>
         <p className="w-[354px] text-[20px]">We're always happy to hear from you. Whether you have a question, feedback feel free to ask</p>
            {/* Head Office */}
+           <a href="#Map" cursor="pointer">
         <div className="flex gap-4 items-start mt-[20px]">
           <img src="/Location.png" alt="location" className="w-[60px] mt-2 h-[60px]" />
           <div>
@@ -43,6 +44,9 @@ const Contactscreen = () =>{
             </p>
           </div>
           </div>
+          </a>
+          {/* Email */}
+          <a href="mailto:eciainwebsite@gmail.com?subject=Course%20Registration%20Query&body=Hello,%20I%20have%20a%20question%20about%20the%20course." cursor="pointer">
           <div className="flex gap-4 items-start mt-[20px]">
           <img src="/Mail.png" alt="Email" className="w-[60px] mt-2 h-[60px]" />
           <div>
@@ -52,6 +56,9 @@ const Contactscreen = () =>{
             </p>
           </div>
           </div>
+          </a>
+          {/* Call */}
+          <a href="tel:+919159873818" cursor="pointer">
           <div className="flex gap-4 items-start mt-[20px]">
           <img src="/call.png" alt="call" className="w-[60px] mt-2 h-[60px]" />
           <div>
@@ -61,6 +68,7 @@ const Contactscreen = () =>{
             </p>
           </div>
           </div>
+          </a>
           {/* Divider */}
       <div className="border-t border-[#0a0908]/30 w-[295px]   mt-[50px]"></div>
        {/* Title */}
@@ -69,10 +77,13 @@ const Contactscreen = () =>{
       {/* Icons */}
       <div className="flex flex-row gap-1 ml-[20px]">
       <div className=" text-white">
-        <a
-          href="#"
-       
-        >
+       <a
+  href={`https://wa.me/919994508321?text=${text}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ cursor: "pointer" }}
+>
+ 
           <img src="Whatsapp.png" alt="whatsapp" className="h-[40px] h-[40px] ml-4" />
         </a>
       </div>

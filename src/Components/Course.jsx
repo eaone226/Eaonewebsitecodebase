@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Star, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+
 const Courses = ({ showTitle = true, excludeId = null }) => {
   const [courses, setCourses] = useState([]);
 
@@ -18,46 +18,20 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
     ? courses.filter((course) => course.id !== excludeId)
     : courses;
 
-  // Animation variants
-  const cardVariants = [
-    {
-      hidden: { opacity: 0, x: -150 },
-      visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-    },
-    {
-      hidden: { opacity: 0, scale: 0.5 },
-      visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
-    },
-    {
-      hidden: { opacity: 0, x: 150 },
-      visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-    },
-  ];
-
   return (
     <section id="course" className="mt-[80px] bg-[#f7f7f7] px-[120px]">
       <div className="container mx-auto text-center">
         {showTitle && (
-          <motion.h2
-            className="text-[36px] font-bold mb-[40px]"
-            initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, ease: "backOut" }}
-            viewport={{ once: true }}
-          >
+          <h2 className="text-[36px] font-bold mb-[40px]">
             Courses
-          </motion.h2>
+          </h2>
         )}
 
         <div className="flex flex-wrap justify-center gap-[13px]">
-          {displayedCourses.map((course, index) => (
-            <motion.div
+          {displayedCourses.map((course) => (
+            <div
               key={course.id}
               className="relative w-[332px] h-[442px] rounded-2xl overflow-hidden shadow-md group cursor-pointer"
-              variants={cardVariants[index % cardVariants.length]}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
             >
               {/* Image */}
               <img
@@ -103,7 +77,7 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
                   </h3>
                 </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
