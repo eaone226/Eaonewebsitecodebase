@@ -1,0 +1,51 @@
+[
+  {
+    "img": "/Logodesigning.png",
+    "icon": "/serviceicon1.svg",
+    "title": "Logo Designing",
+    "description": "We create custom logos that reflect your brand's identity, making it memorable and unique.",
+    "deswidth": "w-[273px]"
+  },
+  {
+    "img": "/Digitalmarketing.png",
+    "icon": "/serviceicon2.svg",
+    "title": "Digital Marketing",
+    "description": "Digital marketing boosts brand visibility with SEO, social media, and targeted ads.",
+    "deswidth": "w-[243px]"
+  },
+  {
+    "img": "/socialmedia.png",
+    "icon": "/serviceicon3.svg",
+    "title": "Social Media Branding",
+    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "deswidth": "w-[243px]"
+  },
+  {
+    "img": "/Videoeditingservice.png",
+    "icon": "/serviceicon3.svg",
+    "title": "Video Editing",
+    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "deswidth": "w-[243px]"
+  },
+  {
+    "img": "/Branding.png",
+    "icon": "/serviceicon3.svg",
+    "title": "Branding",
+    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "deswidth": "w-[243px]"
+  },
+  {
+    "img": "/Graphicdesigningservice.png",
+    "icon": "/serviceicon3.svg",
+    "title": "Graphic Designing",
+    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "deswidth": "w-[243px]"
+  },
+  {
+    "img": "/socialmedia.png",
+    "icon": "/serviceicon3.svg",
+    "title": "Web Designing",
+    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "deswidth": "w-[243px]"
+  }
+]
