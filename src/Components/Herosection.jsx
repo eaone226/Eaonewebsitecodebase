@@ -9,13 +9,13 @@ const Herosection = () => {
             <p className="text-[20px] pt-[127px]">Welcome to the</p>
             <h1 className="text-[64px] w-[422px] text-[#0367fc]  leading-[1.2] font-black" >Beginning of <span className="text-[#0367fc] italic font-black">change.</span></h1>
             <p className="w-[486px] text-[20px] mt-[24px]">Empowering your future through practical learning. Discover courses that match your career goals.</p>
-            <div className="flex flex-row gap-[20px]">
+            <div className="flex flex-row gap-[20px] mt-[63px]">
               <a href="https://forms.gle/b8emcBsY3ghZDZEW6" target="_blank" rel="noopener noreferrer">
-               <button className="bg-[#0367fc] mt-[63px] w-[245px] h-[60px] rounded-[14px] text-[#f7f7f7] text-[24px] font-bold flex items-center justify-center gap-2 hover:bg-[#d2f801] hover:text-[#0367fc] cursor-pointer">Join Course <ChevronRight className="mt-1" size={30} /></button>
+               <button className="bg-[#0367fc]  w-[245px] h-[60px] rounded-[14px] text-[#f7f7f7] text-[24px] font-bold flex items-center justify-center gap-2 hover:bg-[#d2f801] hover:text-[#0367fc] cursor-pointer">Join Course <ChevronRight className="mt-1" size={30} /></button>
                </a>
                <a
                  href="/contact"
-                 className="border border-[#0367fc] mt-[63px] w-[214px] pl-2 h-[60px] rounded-[14px] text-[#0367fc] text-[24px] font-bold flex items-center justify-center hover:bg-[#d2f801] gap-2"
+                 className="border border-[#0367fc]  w-[214px] pl-2 h-[60px] rounded-[14px] text-[#0367fc] text-[24px] font-bold flex items-center justify-center hover:bg-[#d2f801] gap-2"
                  style={{ textDecoration: 'none' }}
                >
                  Enquire now<ChevronRight className="mt-1" size={30} />
