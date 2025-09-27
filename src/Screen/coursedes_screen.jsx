@@ -57,9 +57,11 @@ const HeroSection = () => {
             <p className="w-[442px] text-[24px] text-[#f7f7f7]">
               {course.description}
             </p>
+             < a href="https://forms.gle/b8emcBsY3ghZDZEW6" target="_blank" rel="noopener noreferrer">
             <button className="bg-[#0367fc] w-[178px] h-[55px] rounded-[10px] text-[24px] font-bold text-[#f7f7f7] mt-[20px]">
               Enroll now
             </button>
+            </a>
           </div>
         </div>
       </div>

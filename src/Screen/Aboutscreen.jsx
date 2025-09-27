@@ -25,9 +25,11 @@ const Aboutscreen= () => {
             We are a transformative learning platform committed to helping
             individuals from all walks of life unlock their creative potential
           </p>
-          <button className="mt-6 bg-[#0367fc] hover:bg-[#0255d0] text-white w-[215px] h-[50px] font-bold py-2 px-6 rounded-lg">
+           <a href="https://forms.gle/b8emcBsY3ghZDZEW6" target="_blank" rel="noopener noreferrer" >
+          <button  className="mt-6 bg-[#0367fc] hover:bg-[#0255d0] text-white w-[215px] h-[50px] font-bold py-2 px-6 rounded-lg cursor-pointer">
             Join With Us
           </button>
+          </a>
         </div>
       </div>
 
