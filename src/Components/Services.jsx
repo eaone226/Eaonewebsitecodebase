@@ -95,20 +95,17 @@ const Services = () => {
         ))}
       </div>
 
-      {/* Scroll Indicators */}
-      <div className="flex justify-center items-center mt-6 gap-3">
-        {Array.from({ length: Math.ceil(services.length / 3) }).map(
-          (_, index) => (
-            <div
-              key={index}
-              onClick={() => setStartIndex(index * 3)}
-              className={`w-[40px] h-[12px] rounded-full cursor-pointer transition-all duration-300 ${
-                startIndex === index * 3 ? "bg-black" : "bg-gray-300"
-              }`}
-            />
-          )
-        )}
-      </div>
+     {/* Scroll Indicator - Progress Bar */}
+<div className="relative w-[200px] h-[12px] bg-[#0a0908]/10 rounded-full mx-auto mt-6 overflow-hidden">
+  <div
+    className="absolute top-0 left-0 h-full bg-[#0a0908] rounded-full transition-all duration-500"
+    style={{
+      width: `${
+        ((startIndex) / (services.length - 3)) * 100 + 10
+      }%`, // starts with 10% filled
+    }}
+  />
+</div>
     </section>
   );
 };

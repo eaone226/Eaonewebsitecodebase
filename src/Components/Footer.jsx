@@ -47,14 +47,19 @@ const Footer = () => {
         <div className="ml-[80px]">
           <h1 className="text-[24px] font-bold mb-[10px]">Social Media</h1>
           <ul className="space-y-[10px] text-[20px]">
+            
             <li className="flex items-center gap-[14px]">
+              
               <img
                 src="/Instagram.png"
                 alt="Instagram"
                 className="w-[24px] h-[24px]"
               />
+              <a href="https://www.instagram.com/ecia.4you/?igsh=MXEycXZsZTA2bjRscQ%3D%3D#" className="hover:text-[#0367fc]" target="_blank" rel="noopener noreferrer">
               Instagram
+              </a>
             </li>
+         
             <li className="flex items-center gap-[14px]">
               <img src="/FB.png" alt="Facebook" className="w-[24px] h-[24px]" />
               Facebook
@@ -69,7 +74,10 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-[14px]">
               <img src="/Mail.png" alt="Mail" className="w-[24px] h-[24px]" />
+               <a href="mailto:eciainwebsite@gmail.com?subject=Course%20Registration%20Query&body=Hello,%20I%20have%20a%20question%20about%20the%20course." cursor="pointer" className="hover:text-[#0367fc]" target="_blank" rel="noopener noreferrer">
+          
               Gmail
+              </a>
             </li>
           </ul>
         </div>
