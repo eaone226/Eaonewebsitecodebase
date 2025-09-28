@@ -22,30 +22,30 @@
   },
   {
     "img": "/Videoeditingservice.png",
-    "icon": "/serviceicon3.svg",
+    "icon": "/videologo.png",
     "title": "Video Editing",
-    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "description": "We create clean, engaging, and creative video edits that turn your ideas into reality.",
     "deswidth": "w-[243px]"
   },
   {
     "img": "/Branding.png",
-    "icon": "/serviceicon3.svg",
+    "icon": "/brandlogo.png",
     "title": "Branding",
-    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "description": "We create videos that bring your brand to life and connect with your audience.",
     "deswidth": "w-[243px]"
   },
   {
     "img": "/Graphicdesigningservice.png",
-    "icon": "/serviceicon3.svg",
+    "icon": "/graphiclogo.png",
     "title": "Graphic Designing",
-    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "description": "Learn to create stunning visuals, logos, posters, and digital content that captivate any audience",
     "deswidth": "w-[243px]"
   },
   {
-    "img": "/socialmedia.png",
-    "icon": "/serviceicon3.svg",
+    "img": "/webimage.png",
+    "icon": "/weblogo.png",
     "title": "Web Designing",
-    "description": "We help build strong social media ensuring consistent and engaging brand representation online.",
+    "description": "Web designing creates visually user-friendly websites that reflect a brand’s identity.",
     "deswidth": "w-[243px]"
   }
 ]

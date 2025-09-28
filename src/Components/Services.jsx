@@ -1,9 +1,9 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Services = () => {
-   useEffect(() => {
+  useEffect(() => {
     fetch("/Data/service_data.json")
       .then((res) => res.json())
       .then((data) => setServices(data))
@@ -11,6 +11,7 @@ const Services = () => {
   }, []);
   const [startIndex, setStartIndex] = useState(0);
   const [services, setServices] = useState([]);
+
   const handleNext = () => {
     if (startIndex < services.length - 3) {
       setStartIndex(startIndex + 1);
@@ -24,9 +25,14 @@ const Services = () => {
   };
 
   return (
-    <section id="service" className="bg-[#f7f7f7] rounded-[14px] mt-[80px] relative">
+    <section
+      id="service"
+      className="bg-[#f7f7f7] rounded-[14px] mt-[80px] relative"
+    >
       {/* Section Title */}
-      <h2 className="text-[36px] font-bold pt-[140px] text-center mb-10">Services</h2>
+      <h2 className="text-[36px] font-bold pt-[140px] text-center mb-10">
+        Services
+      </h2>
 
       {/* Scroll Arrows */}
       <button
@@ -67,7 +73,9 @@ const Services = () => {
 
             {/* Card Content */}
             <div className="mt-[30px] text-center items-center px-4">
-              <h3 className="text-[24px] text-center font-bold">{service.title}</h3>
+              <h3 className="text-[24px] text-center font-bold">
+                {service.title}
+              </h3>
               <p
                 className={`text-gray-600 text-justify mt-[30px] text-[16px] w-[273px] mt-2 ${service.deswidth}`}
               >
@@ -85,6 +93,21 @@ const Services = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Scroll Indicators */}
+      <div className="flex justify-center items-center mt-6 gap-3">
+        {Array.from({ length: Math.ceil(services.length / 3) }).map(
+          (_, index) => (
+            <div
+              key={index}
+              onClick={() => setStartIndex(index * 3)}
+              className={`w-[40px] h-[12px] rounded-full cursor-pointer transition-all duration-300 ${
+                startIndex === index * 3 ? "bg-black" : "bg-gray-300"
+              }`}
+            />
+          )
+        )}
       </div>
     </section>
   );
