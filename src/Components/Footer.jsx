@@ -53,7 +53,7 @@ const Footer = () => {
               <img
                 src="/Instagram.png"
                 alt="Instagram"
-                className="w-[24px] h-[24px]"sk
+                className="w-[24px] h-[24px]"
               />
               <a href="https://www.instagram.com/ecia.4you/?igsh=MXEycXZsZTA2bjRscQ%3D%3D#" className="hover:text-[#0367fc]" target="_blank" rel="noopener noreferrer">
               Instagram

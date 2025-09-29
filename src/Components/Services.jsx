@@ -27,10 +27,10 @@ const Services = () => {
   return (
     <section
       id="service"
-      className="bg-[#f7f7f7] rounded-[14px] mt-[80px] relative"
+      className="bg-[#f7f7f7] rounded-[14px]  mt-[80px] relative"
     >
       {/* Section Title */}
-      <h2 className="text-[36px] font-bold pt-[140px] text-center mb-10">
+      <h2 className="text-[36px] font-bold  text-center mb-10">
         Services
       </h2>
 
