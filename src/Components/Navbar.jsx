@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const navLinksVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: (i) => ({
@@ -37,21 +40,21 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#0367fc] px-[120px] h-[62px] w-full fixed top-0 left-0 z-50 shadow-md">
+    <nav className="bg-[#0367fc] w-[41%] md:w-full fixed top-0 left-0 z-50 shadow-md px-4 sm:px-20 md:px-[120px] h-[62px]">
       <div className="flex justify-between items-center h-full">
         {/* Logo */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative w-[100px] h-[64px] cursor-pointer"
+          className="relative w-[80px] sm:w-[100px] h-[50px] sm:h-[64px] cursor-pointer"
         >
           <motion.img
             src="/Ecialogo-white.png"
             alt="Ecialogo"
             animate={{ opacity: showYellow ? 0 : 1 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 w-[100px] h-[64px]"
+            className="absolute inset-0 w-full h-full"
             style={{ zIndex: showYellow ? 0 : 1 }}
           />
           <motion.img
@@ -59,13 +62,13 @@ const Navbar = () => {
             alt="Ecialogo"
             animate={{ opacity: showYellow ? 1 : 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 w-[100px] h-[64px]"
+            className="absolute inset-0 w-full h-full"
             style={{ zIndex: showYellow ? 1 : 0 }}
           />
         </motion.div>
 
-        {/* Links */}
-        <div className="flex items-center space-x-[22px]">
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center space-x-[22px]">
           {links.map((item, i) => (
             <motion.div
               key={i}
@@ -121,13 +124,44 @@ const Navbar = () => {
             transition={{ duration: 0.7, ease: "easeOut" }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="font-bold border border-[#f7f7f7] rounded-[4px] text-[16px] px-4 h-[34px] 
-              hover:bg-[#f7f7f7] hover:text-[#0367fc] flex items-center justify-center text-[#f7f7f7] cursor-pointer"
+            className="font-bold border border-[#f7f7f7] rounded-[4px] text-[16px] px-3 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc] flex items-center justify-center text-[#f7f7f7] cursor-pointer"
           >
             For Business
           </motion.button>
         </div>
+
+        {/* Mobile Hamburger */}
+        <div className="md:hidden flex items-center">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-white focus:outline-none"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-[#0367fc] w-full py-4 flex flex-col items-center space-y-4 shadow-lg">
+          {links.map((item, i) => (
+            <RouterLink
+              key={i}
+              to={item.link}
+              className="text-white text-[16px] font-bold hover:text-[#d2f801]"
+              onClick={() => setMenuOpen(false)}
+            >
+              {item.label}
+            </RouterLink>
+          ))}
+          <button
+            className="font-bold border border-[#f7f7f7]  text-[#f7f7f7] rounded-[4px] text-[16px] px-4 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc]"
+            onClick={() => setMenuOpen(false)}
+          >
+            For Business
+          </button>
+        </div>
+      )}
     </nav>
   );
 };
