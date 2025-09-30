@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#0367fc] w-[41%] md:w-full fixed top-0 left-0 z-50 shadow-md px-4 sm:px-20 md:px-[120px] h-[62px]">
+    <nav className="bg-[#0367fc] w-full md:w-full fixed top-0 left-0 z-50 shadow-md px-4 sm:px-20 md:px-[120px] h-[62px]">
       <div className="flex justify-between items-center h-full">
         {/* Logo */}
         <motion.div
