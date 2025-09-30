@@ -4,14 +4,16 @@
     "icon": "/serviceicon1.svg",
     "title": "Logo Designing",
     "description": "We create custom logos that reflect your brand's identity, making it memorable and unique.",
-    "deswidth": "w-[273px]"
+    "deswidth": "w-[273px]",
+    "mobilewidth":"w-[230px]"
   },
   {
     "img": "/Digitalmarketing.png",
     "icon": "/serviceicon2.svg",
     "title": "Digital Marketing",
     "description": "Digital marketing boosts brand visibility with SEO, social media, and targeted ads.",
-    "deswidth": "w-[243px]"
+    "deswidth": "w-[243px]",
+    "mobilewidth":"w-[200px]"
   },
   {
     "img": "/socialmedia.png",
@@ -24,15 +26,17 @@
     "img": "/Videoeditingservice.png",
     "icon": "/videologo.png",
     "title": "Video Editing",
-    "description": "We create clean, engaging, and creative video edits that turn your ideas into reality.",
-    "deswidth": "w-[243px]"
+    "description": "We create clean, engaging, and creative video edits that turn your ideas into reality and make you editor.",
+    "deswidth": "w-[243px]",
+     "mobilewidth":"w-[200px]"
   },
   {
     "img": "/Branding.png",
     "icon": "/brandlogo.png",
     "title": "Branding",
-    "description": "We create videos that bring your brand to life and connect with your audience.",
-    "deswidth": "w-[243px]"
+    "description": "We create videos and reels that bring your brand to life and connect with your audience.",
+    "deswidth": "w-[243px]",
+    "mobilewidth":"w-[200px]"
   },
   {
     "img": "/Graphicdesigningservice.png",
@@ -46,6 +50,7 @@
     "icon": "/weblogo.png",
     "title": "Web Designing",
     "description": "Web designing creates visually user-friendly websites that reflect a brand’s identity.",
-    "deswidth": "w-[243px]"
+    "deswidth": "w-[243px]",
+    "mobilewidth":"w-[200px]"
   }
 ]
