@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <section className="relative bg-[#0367fc] px-6 sm:px-10 md:px-[120px] mt-[80px] md:mt-[160px]">
+    <section className="relative bg-[#0367fc] px-6 sm:px-10 md:px-[120px] mt-[40px] md:mt-[160px]">
       <div className="relative flex flex-col md:flex-row items-center md:items-start justify-between h-auto md:h-[336px]">
         {/* Heading */}
         <motion.h1

@@ -82,7 +82,7 @@ const Services = () => {
           (service, index) => (
             <div
               key={index}
-              className="bg-[#f7f7f7] rounded-2xl shadow-md h-[446px] w-[80%] md:w-[325px] md:w-1/3 flex-shrink-0 snap-start hover:shadow-xl transition duration-300"
+              className="bg-[#f7f7f7] rounded-2xl shadow-md h-[400px] md:h-[446px] w-[80%] md:w-[325px] md:w-1/3 flex-shrink-0 snap-start hover:shadow-xl transition duration-300"
             >
               {/* Service Image */}
               <div className="relative items-center flex justify-center">
@@ -105,11 +105,11 @@ const Services = () => {
                   {service.title}
                 </h3>
                 <p
-                  className={`text-gray-600 text-justify mt-[30px]  md:text-[16px]   md:w-[273px] mt-2 md:${service.deswidth} ${service.mobilewidth}`}
+                  className={`text-gray-600 text-justify mt-[10px] md:mt-[30px]  md:text-[16px]   md:w-[273px] mt-2 md:${service.deswidth} ${service.mobilewidth}`}
                 >
                   {service.description}
                 </p>
-                <div className="flex justify-center mt-[30px]">
+                <div className="flex justify-center mt-[10px] md:mt-[30px]">
                   <a
                     href="#"
                     className="text-black text-[16px] w-[124px] font-bold flex items-center gap-1 whitespace-nowrap hover:text-[#0367fc]"
@@ -124,7 +124,7 @@ const Services = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className=" hidden  md:block relative w-[200px] h-[12px] bg-[#0a0908]/10 rounded-full mx-auto mt-6 overflow-hidden">
+      <div className=" hidden  md:block relative w-[200px] h-[12px] bg-[#0a0908]/10 rounded-full mx-auto mt-10 overflow-hidden">
         <div
           className="absolute top-0 left-0 h-full bg-[#0a0908] rounded-full transition-all duration-500"
           style={{

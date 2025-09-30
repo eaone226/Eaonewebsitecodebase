@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutUs() {
   return (
-    <section className="mt-[60px] md:mt-[80px]">
+    <section className="mt-[40px] md:mt-[80px]">
       {/* Title */}
       <h2 className="text-[24px] md:text-[36px] px-6 md:px-[120px] text-center font-bold">
         About Us
@@ -59,7 +59,7 @@ export default function AboutUs() {
           {/* Button */}
           <a
             href="/about"
-            className="flex items-center justify-center md:justify-start gap-2 text-[18px] sm:text-[20px] md:text-[24px] font-medium text-black mt-6 hover:text-[#0367fc]"
+            className="flex items-center justify-center md:justify-start gap-2 text-[18px] sm:text-[20px] md:text-[24px] font-medium text-black mt-10 hover:text-[#0367fc]"
             style={{ textDecoration: "none" }}
           >
             More about <ArrowRight size={24} className="mt-1 md:size-7" />

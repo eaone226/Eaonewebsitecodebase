@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#d2f801] mt-[100px] text-black  flex flex-row rounded-tr-[50px]">
+    <footer className="bg-[#d2f801] mt-[40px] md:mt-[80px] text-black  flex flex-row rounded-tr-[50px]">
       {/* Logo */}
       <div className=" hidden md:flex md:ml-[80px]  md:items-center md:justify-center">
         <img src="/logomark.png" className=" h-[100px] w-[100px]   md:h-[150px] md:w-[150px]" alt="Logo" />
