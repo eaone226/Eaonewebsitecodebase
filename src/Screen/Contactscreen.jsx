@@ -8,14 +8,14 @@ const Contactscreen = () =>{
      return(
           <div>
         <Navbar />
-             
-      <img
-        src="/contacts.png" 
-        alt="Contact Support"
-
-      />
-       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#0a0908]/70 h-[380px]"></div>
+        
+       <img
+          src="/contacts.png"
+          alt="Contact Support"
+          className="w-full h-[300px] md:h-auto object-cover"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#0a0908]/70 h-[300px] md:h-[378px]"></div>
 
      
 
@@ -27,10 +27,12 @@ const Contactscreen = () =>{
           your branding, digital, and creative needs.
         </p>
       </div>
+
       {/* contact box */}
-      <div className="bg-[#f7f7f7] z-10 inset-0 mt-[300px] pl-[94px] absolute w-[1040px] mx-[110px] rounded-[30px] shadow-lg h-[708px] flex flex-row justify-center"  >
+      
+      <div className="bg-[#f7f7f7] z-10 inset-0 mt-[500px] md:mt-[300px] l-[10px] md:pl-[94px] absolute w-[1040px] mx-[50px] md:mx-[110px] rounded-[30px] shadow-lg h-[708px] flex flex-col md:flex-row justify-center"  >
         <div>
-        <h1 className="text-[#0367fc] text-[40px] mt-[40px] mb-2 font-bold">Get in Touch</h1>
+        <h1 className="text-[#0367fc] text-[40px] mt-[30px] mb-2 font-bold">Get in Touch</h1>
         <p className="w-[354px] text-[20px]">We're always happy to hear from you. Whether you have a question, feedback feel free to ask</p>
            {/* Head Office */}
            <a href="#Map" cursor="pointer">
@@ -116,7 +118,10 @@ const Contactscreen = () =>{
       {/* Form */}
        <ContactForm />
       </div>
+      <div>
+        <h1  className=" md:text-[40px] text-[#0367fc] mt-[80px] text-center font-bold mb-[50px] mt-[670px]">Location</h1>
        <Mapscreen />
+       </div>
        <Footer />
       </div>
      )

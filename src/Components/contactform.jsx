@@ -83,7 +83,7 @@ const ContactForm = () => {
 };
 
   return (
-    <form onSubmit={sendEmail} className="bg-[#0a0908]/10 w-full ml-[50px]">
+    <form onSubmit={sendEmail} className="bg-[#0a0908]/10 rounded-r-[30px]  w-full ml-[50px]">
       <h1 className="text-[#0367fc] text-[40px] mt-[30px] text-center mb-2 font-bold">
         Send us message
       </h1>
@@ -111,7 +111,7 @@ const ContactForm = () => {
         <select
           value={countryCode}
           onChange={(e) => setCountryCode(e.target.value)}
-          className="bg-[#f7f7f7] rounded-[10px] w-[75px] h-[50px] pl-3 mr-2"
+          className="bg-[#f7f7f7] rounded-[10px] w-[75px] h-[50px] pl-3 pr-2 align-middle mr-4 cursor-pointer"
         >
           {codes.map((item, index) => (
             <option key={index} value={item.code}>
