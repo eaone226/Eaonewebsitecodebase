@@ -29,6 +29,7 @@ const Navbar = () => {
     { label: "Services", link: "service", type: "scroll" },
     { label: "About", link: "/about", type: "router" },
     { label: "Contact", link: "/contact", type: "router" },
+    
   ];
 
   const [showYellow, setShowYellow] = React.useState(false);
@@ -118,6 +119,7 @@ const Navbar = () => {
           ))}
 
           {/* Button */}
+          <RouterLink to="/business">
           <motion.button
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -128,6 +130,7 @@ const Navbar = () => {
           >
             For Business
           </motion.button>
+          </RouterLink>
         </div>
 
         {/* Mobile Hamburger */}

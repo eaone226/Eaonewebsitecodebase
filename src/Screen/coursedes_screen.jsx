@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
-const HeroSection = () => {
+const Coursedesc_screeen = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
 
@@ -246,4 +246,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Coursedesc_screeen;

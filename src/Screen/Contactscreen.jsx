@@ -30,9 +30,9 @@ const Contactscreen = () =>{
 
       {/* contact box */}
       
-      <div className="bg-[#f7f7f7] z-10 inset-0 mt-[500px] md:mt-[300px] l-[10px] md:pl-[94px] absolute w-[1040px] mx-[50px] md:mx-[110px] rounded-[30px] shadow-lg h-[708px] flex flex-col md:flex-row justify-center"  >
-        <div>
-        <h1 className="text-[#0367fc] text-[40px] mt-[30px] mb-2 font-bold">Get in Touch</h1>
+      <div className=" bg-[#0367fc] md:bg-[#f7f7f7] z-10 inset-0 mt-[600px] md:mt-[300px] l-[10px] md:pl-[94px] absolute md:w-[1040px] mx-[50px] md:mx-[110px] rounded-[30px] shadow-lg h-[708px] flex flex-col md:flex-row justify-center"  >
+        <div className="bg-[#0367fc] md:bg-transparent">
+        <h1 className="text-[#0367fc] md:text-[40px] mt-[30px] mb-2 font-bold">Get in Touch</h1>
         <p className="w-[354px] text-[20px]">We're always happy to hear from you. Whether you have a question, feedback feel free to ask</p>
            {/* Head Office */}
            <a href="#Map" cursor="pointer">
@@ -119,7 +119,7 @@ const Contactscreen = () =>{
        <ContactForm />
       </div>
       <div>
-        <h1  className=" md:text-[40px] text-[#0367fc] mt-[80px] text-center font-bold mb-[50px] mt-[670px]">Location</h1>
+        <h1  className=" md:text-[40px] text-[#0367fc] mt-[1380px] text-center font-bold mb-[50px] md:mt-[670px]">Location</h1>
        <Mapscreen />
        </div>
        <Footer />

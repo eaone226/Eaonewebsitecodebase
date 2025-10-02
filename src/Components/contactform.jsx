@@ -83,13 +83,13 @@ const ContactForm = () => {
 };
 
   return (
-    <form onSubmit={sendEmail} className="bg-[#0a0908]/10 rounded-r-[30px]  w-full ml-[50px]">
-      <h1 className="text-[#0367fc] text-[40px] mt-[30px] text-center mb-2 font-bold">
+    <form onSubmit={sendEmail} className="bg-[#0a0908]/10 rounded-r-[30px] mt-[20px] md:mt-0 w-full ml-0 md:ml-[50px]">
+      <h1 className="text-[#0367fc] md:text-[40px] mt-[30px] text-center mb-2 font-bold">
         Send us message
       </h1>
 
       {/* Name */}
-      <label className="font-bold ml-[90px] mt-[14px] text-[24px]">Name</label>
+      <label className="font-bold md:ml-[90px] mt-[14px] text-[24px]">Name</label>
       <br />
       <input
         type="text"
@@ -97,16 +97,16 @@ const ContactForm = () => {
         value={formData.name}
         onChange={handleChange}
         name="name"
-        className="bg-[#f7f7f7] ml-[90px] mt-[14px] pl-[20px] rounded-[10px] w-[331px] h-[50px]"
+        className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] pl-[20px] rounded-[10px] w-[331px] h-[50px]"
         required
       />
       <br />
 
       {/* Phone Number */}
-      <label className="font-bold ml-[90px] mt-[20px] text-[24px] block">
+      <label className="font-bold md:ml-[90px] mt-[20px] text-[24px] block">
         Phone Number
       </label>
-      <div className="flex ml-[90px] mb-[20px] mt-[14px]">
+      <div className="flex md:ml-[90px] mb-[20px] mt-[14px]">
         {/* Country Code Dropdown */}
         <select
           value={countryCode}
@@ -133,7 +133,7 @@ const ContactForm = () => {
       </div>
 
       {/* Email */}
-      <label className="font-bold ml-[90px] text-[24px]">Email</label>
+      <label className="font-bold md:ml-[90px] text-[24px]">Email</label>
       <br />
       <input
         type="email"
@@ -141,25 +141,25 @@ const ContactForm = () => {
         onChange={handleChange}
         name="email"
         placeholder="Ex:user@gmail.com"
-        className="bg-[#f7f7f7] ml-[90px] mt-[14px] mb-[20px] pl-[20px] rounded-[10px] w-[331px] h-[50px]"
+        className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] mb-[20px] pl-[20px] rounded-[10px] w-[331px] h-[50px]"
         required
       />
 
       {/* Message */}
-      <label className="font-bold ml-[90px] text-[24px]">Message</label>
+      <label className="font-bold md:ml-[90px] text-[24px]">Message</label>
       <br />
       <textarea
         value={formData.message}
         onChange={handleChange}
         name="message"
         placeholder="Type your Message here...."
-        className="bg-[#f7f7f7] ml-[90px] mt-[14px] pl-[20px] pt-[10px] rounded-[10px] w-[331px] h-[100px]"
+        className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] pl-[20px] pt-[10px] rounded-[10px] w-[331px] h-[100px]"
         required
       />
 
       {/* Submit button */}
       <button
-        className="bg-[#0367fc] w-[331px] h-[50px] text-[24px] font-bold rounded-[10px] text-[#f7f7f7] flex items-center justify-center mx-[90px] mt-6 cursor-pointer hover:bg-[#0367fc]/80 active:scale-95 transition-all duration-150"
+        className="bg-[#0367fc] w-[331px] h-[50px] text-[24px] font-bold rounded-[10px] text-[#f7f7f7] flex items-center justify-center md:mx-[90px] mt-6 cursor-pointer hover:bg-[#0367fc]/80 active:scale-95 transition-all duration-150"
         type="submit"
       >
        Submit
