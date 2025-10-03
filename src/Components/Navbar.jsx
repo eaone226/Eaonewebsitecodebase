@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navLinksVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -29,11 +30,10 @@ const Navbar = () => {
     { label: "Services", link: "service", type: "scroll" },
     { label: "About", link: "/about", type: "router" },
     { label: "Contact", link: "/contact", type: "router" },
-    
   ];
 
   const [showYellow, setShowYellow] = React.useState(false);
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setShowYellow((prev) => !prev);
     }, 3000);
@@ -80,7 +80,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
             >
               {item.type === "home" ? (
-                window.location.pathname === "/" ? (
+                location.pathname === "/" ? (
                   <span
                     className={linkClasses}
                     onClick={() =>
@@ -95,7 +95,7 @@ const Navbar = () => {
                   </RouterLink>
                 )
               ) : item.type === "scroll" ? (
-                window.location.pathname === "/" ? (
+                location.pathname === "/" ? (
                   <ScrollLink
                     to={item.link}
                     smooth={true}
@@ -119,17 +119,17 @@ const Navbar = () => {
           ))}
 
           {/* Button */}
-          <RouterLink to="/business">
-          <motion.button
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="font-bold border border-[#f7f7f7] rounded-[4px] text-[16px] px-3 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc] flex items-center justify-center text-[#f7f7f7] cursor-pointer"
-          >
-            For Business
-          </motion.button>
+          <RouterLink to={location.pathname === "/business" ? "/" : "/business"}>
+            <motion.button
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="font-bold border border-[#f7f7f7] rounded-[4px] text-[16px] px-3 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc] flex items-center justify-center text-[#f7f7f7] cursor-pointer"
+            >
+              {location.pathname === "/business" ? "For Student" : "For Business"}
+            </motion.button>
           </RouterLink>
         </div>
 
@@ -157,12 +157,14 @@ const Navbar = () => {
               {item.label}
             </RouterLink>
           ))}
-          <button
-            className="font-bold border border-[#f7f7f7]  text-[#f7f7f7] rounded-[4px] text-[16px] px-4 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc]"
+          <RouterLink
+            to={location.pathname === "/business" ? "/" : "/business"}
             onClick={() => setMenuOpen(false)}
           >
-            For Business
-          </button>
+            <button className="font-bold border border-[#f7f7f7]  text-[#f7f7f7] rounded-[4px] text-[16px] px-4 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc]">
+              {location.pathname === "/business" ? "For Student" : "For Business"}
+            </button>
+          </RouterLink>
         </div>
       )}
     </nav>

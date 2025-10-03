@@ -59,7 +59,7 @@ export default function AboutUs() {
           {/* Button */}
           <a
             href="/about"
-            className="flex items-center justify-center md:justify-start gap-2 text-[18px] sm:text-[20px] md:text-[24px] font-medium text-black mt-10 hover:text-[#0367fc]"
+            className="flex items-center md:justify-start gap-2 text-[18px] sm:text-[20px] w-[180px] md:text-[24px] font-medium text-black mt-10 hover:text-[#0367fc]"
             style={{ textDecoration: "none" }}
           >
             More about <ArrowRight size={24} className="mt-1 md:size-7" />

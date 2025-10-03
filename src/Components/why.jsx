@@ -50,14 +50,14 @@ export default function WhyChooseUs() {
           {items.map((item, i) => (
             <div key={i} className="flex items-start gap-4">
               {/* Number circle, positioned to touch image edge */}
-              <div className=" -ml-12 md:-ml-10 h-[86px] w-[86px] mt-[70px] flex justify-center items-center rounded-full bg-[#f7f7f7] ">
+              <div className=" -ml-12 md:-ml-10 h-[86px] w-[86px] mt-[50px] flex justify-center items-center rounded-full bg-[#f7f7f7] ">
                 <div className="w-[68px] h-[68px] flex items-center justify-center  rounded-full text-[40px] bg-[#0367fc] text-[#f7f7f7] font-bold">
                   {i + 1}
                 </div>
               </div>
               {/* Text */}
               <div>
-                <h3 className="font-bold text-[24px] mt-[56px]">{item.title}</h3>
+                <h3 className="font-bold text-[24px] mt-[40px]">{item.title}</h3>
                 <p className="font-medium text-[20px] w-[426px]">{item.text}</p>
               </div>
             </div>
