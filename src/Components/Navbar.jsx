@@ -32,7 +32,7 @@ const Navbar = () => {
     { label: "Contact", link: "/contact", type: "router" },
   ];
 
-  const [showYellow, setShowYellow] = React.useState(false);
+  const [showYellow, setShowYellow] = useState(false);
   useEffect(() => {
     const interval = setInterval(() => {
       setShowYellow((prev) => !prev);
@@ -41,7 +41,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-[#0367fc] w-full md:w-full fixed top-0 left-0 z-50 shadow-md px-4 sm:px-20 md:px-[120px] h-[62px]">
+    <nav className="bg-[#0367fc] w-full fixed top-0 left-0 z-50 shadow-md px-4 sm:px-20 md:px-[120px] h-[62px]">
       <div className="flex justify-between items-center h-full">
         {/* Logo */}
         <motion.div
@@ -147,21 +147,72 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-[#0367fc] w-full py-4 flex flex-col items-center space-y-4 shadow-lg">
-          {links.map((item, i) => (
-            <RouterLink
-              key={i}
-              to={item.link}
-              className="text-white text-[16px] font-bold hover:text-[#d2f801]"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.label}
-            </RouterLink>
-          ))}
+          {links.map((item, i) => {
+            if (item.type === "scroll") {
+              return location.pathname === "/" ? (
+                <ScrollLink
+                  key={i}
+                  to={item.link}
+                  smooth={true}
+                  offset={-62}
+                  duration={500}
+                  className="text-white text-[16px] font-bold hover:text-[#d2f801]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </ScrollLink>
+              ) : (
+                <RouterLink
+                  key={i}
+                  to={`/#${item.link}`}
+                  className="text-white text-[16px] font-bold hover:text-[#d2f801]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </RouterLink>
+              );
+            } else if (item.type === "home") {
+              return location.pathname === "/" ? (
+                <span
+                  key={i}
+                  className="text-white text-[16px] font-bold hover:text-[#d2f801] cursor-pointer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    setMenuOpen(false);
+                  }}
+                >
+                  {item.label}
+                </span>
+              ) : (
+                <RouterLink
+                  key={i}
+                  to="/"
+                  className="text-white text-[16px] font-bold hover:text-[#d2f801]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </RouterLink>
+              );
+            } else {
+              return (
+                <RouterLink
+                  key={i}
+                  to={item.link}
+                  className="text-white text-[16px] font-bold hover:text-[#d2f801]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.label}
+                </RouterLink>
+              );
+            }
+          })}
+
+          {/* Button */}
           <RouterLink
             to={location.pathname === "/business" ? "/" : "/business"}
             onClick={() => setMenuOpen(false)}
           >
-            <button className="font-bold border border-[#f7f7f7]  text-[#f7f7f7] rounded-[4px] text-[16px] px-4 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc]">
+            <button className="font-bold border border-[#f7f7f7] text-[#f7f7f7] rounded-[4px] text-[16px] px-4 h-[34px] hover:bg-[#f7f7f7] hover:text-[#0367fc]">
               {location.pathname === "/business" ? "For Student" : "For Business"}
             </button>
           </RouterLink>

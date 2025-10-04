@@ -73,7 +73,7 @@ const Businessscreen = () => {
           <h1 className="text-[20px] md:text-[64px] font-bold text-[#D2F801]">
             Welcome to EAone
           </h1>
-          <p className="text-[24px] ml-3 text-white w-[531px]">
+          <p className="text-[24px] ml-3 text-white md:w-[531px]">
             Transforming Ideas into Brands with Lasting Impact.
           </p>
           <RouterLink to="/contact">
@@ -88,13 +88,13 @@ const Businessscreen = () => {
       <Services />
 
       {/* Our expert Team */}
-      <div className="mt-[80px] px-6 md:px-[120px]">
-        <h1 className="text-[36px] font-bold text-center">Our Experienced Team</h1>
-        <div className="flex flex-row mt-[40px]">
-          <p className="text-[26px] w-[576px]">
+      <div className="md:mt-[80px] px-6 md:px-[120px]">
+        <h1 className="text-[36px] font-bold md:text-center">Our Experienced Team</h1>
+        <div className="flex  flex-col md:flex-row mt-[40px]">
+          <p className="text-[26px] md:w-[576px]">
             We offer complete digital solutions from branding, logo design, social media handling, video editing to effective digital marketing strategies. Our services help businesses build strong identities, engage audiences, and drive lasting growth.
           </p>
-          <img src="/expert.png" alt="expert" />
+          <img src="/expert.png" alt="expert" className=" mt-10 md:mt-0" />
         </div>
       </div>
 
@@ -102,22 +102,22 @@ const Businessscreen = () => {
       <WhyChooseUs />
 
       {/* Testimonials & Newsletter */}
-      <div className="px-[120px] mb-[200px] mt-[80px]">
-        <h2 className="text-[36px] relative font-bold mb-[40px]">Client Testimonials</h2>
+      <div className="md:px-[120px] mb-[200px] mt-[80px]">
+        <h2 className=" text-[36px] relative text-center md:text-left font-bold mb-[40px]">Client Testimonials</h2>
 
-        <img src="/rocket.png" alt="rocket" className="absolute top-[2786px] right-5" />
+        <img src="/rocket.png" alt="rocket" className="absolute top-[3740px] md:top-[2786px] md:right-5" />
 
         <div>
-          <div className="relative bg-[#0a0908]/5 h-[329px] flex flex-col w-full text-center">
-            <h3 className="text-[20px] md:text-[48px] mt-[20px] font-bold text-[#0367fc] mb-4">
+          <div className="relative bg-[#0a0908]/5 md:h-[329px] rounded-[10px] mx-[20px] md:mx-0 flex flex-col w-[380px] md:w-full text-center">
+            <h3 className="text-[20px] text-[25px]  md:text-[48px] mt-[20px] font-bold text-[#0367fc] mb-4">
               Ready to Start Our Project?
             </h3>
-            <p className="mb-6 w-[620px] text-[20px] text-left ml-[203px]">
+            <p className="mb-6 w-[340px] md:w-[620px] text-[16px] md:text-[20px] text-left ml-[22px] md:ml-[203px]">
               With all plans in place, we are ready to officially launch our project.
               We are excited to begin our collaboration and work towards a successful outcome.
             </p>
             <a href="https://www.behance.net/gallery/229571561/Branding-Service-Coaching" target="_blank" rel="noopener noreferrer">
-              <button className="w-[196px] h-[58px] bg-[#0367fc] text-[20px] hover:bg-[#0367fc]/60 text-[#f7f7f7] font-bold rounded-[10px] flex items-center text-[24px] justify-center mt-[10px] ml-[203px] cursor-pointer">
+              <button className="md:w-[196px] w-[150px] h-[48px] md:h-[58px] bg-[#0367fc] mb-5 md:mb-0 text-[20px] hover:bg-[#0367fc]/60 text-[#f7f7f7] font-bold rounded-[5px] md:rounded-[10px] flex items-center md:text-[24px] justify-center mt-[10px] ml-[100px] md:ml-[203px] cursor-pointer">
                 Our Project
               </button>
             </a>
@@ -125,13 +125,13 @@ const Businessscreen = () => {
 
           {/* Newsletter Section */}
           <div className="text-center py-12 relative">
-            <h3 className="text-[40px] font-bold mb-2">Never Miss An Opportunity</h3>
-            <p className="mb-6 text-[20px]">
+            <h3 className=" text-[20px] md:text-[40px] font-bold mb-2">Never Miss An Opportunity</h3>
+            <p className="mb-6  md:text-[20px]">
               Get in touch with us for queries, support, or collaboration
             </p>
 
             <form onSubmit={handleSubmit} className="flex justify-center">
-             <div className="flex items-center h-[70px] w-[630px] bg-[#f7f7f7] border border-[#0367fc] rounded-[10px] overflow-hidden">
+             <div className="flex items-center h-[70px] w-[360px] md:w-[630px] bg-[#f7f7f7] border border-[#0367fc] rounded-[10px] overflow-hidden">
               <input
                  type="email"
                  placeholder="Enter your mail address"
@@ -156,7 +156,6 @@ const Businessscreen = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );
