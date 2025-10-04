@@ -30,17 +30,17 @@ const Contactscreen = () =>{
 
       {/* contact box */}
       
-      <div className=" bg-[#0367fc] md:bg-[#f7f7f7] z-10 inset-0 mt-[600px] md:mt-[300px] l-[10px] md:pl-[94px] absolute md:w-[1040px] mx-[50px] md:mx-[110px] rounded-[30px] shadow-lg h-[708px] flex flex-col md:flex-row justify-center"  >
-        <div className="bg-[#0367fc] md:bg-transparent">
-        <h1 className="text-[#0367fc] md:text-[40px] mt-[30px] mb-2 font-bold">Get in Touch</h1>
-        <p className="w-[354px] text-[20px]">We're always happy to hear from you. Whether you have a question, feedback feel free to ask</p>
+      <div className=" bg-[#f7f7f7] z-10 inset-0 mt-[800px] md:mt-[300px]  md:pl-[94px] absolute md:w-[1040px] mx-[20px] md:mx-[110px]   md:rounded-[30px] shadow-lg md:h-[708px] flex flex-col md:flex-row justify-center"  >
+        <div className="bg-[#f7f7f7] border-4 border-[#0a0908]/10 md:border-none border-b-0 rounded-t-[10px]  md:bg-[#f7f7f7] md:bg-transparent">
+        <h1 className="text-[#0367fc] text-center text-[30px] md:text-[40px] mt-[30px] mb-2 font-bold">Get in Touch</h1>
+        <p className="md:w-[354px] ml-10 md:ml-0 text-[14px] md:text-[20px]">We're always happy to hear from you. Whether you have a question, feedback feel free to ask</p>
            {/* Head Office */}
            <a href="#Map" cursor="pointer">
-        <div className="flex gap-4 items-start mt-[20px]">
-          <img src="/Location.png" alt="location" className="w-[60px] mt-2 h-[60px]" />
+        <div className="flex gap-4 items-start ml-2 md:ml-0 mt-[20px]">
+          <img src="/Location.png" alt="location" className=" w-[50px] h-[50px] md:w-[60px] mt-2 md:h-[60px]" />
           <div>
-            <h3 className="font-bold text-[20px] ">Head Office</h3>
-            <p className="text-[16px]">
+            <h3 className="font-bold text-[16px] md:text-[20px] ">Head Office</h3>
+            <p className="text-[14px] md:text-[16px]">
               Natesan street, <br />
               Karapakkam chennai 600097
             </p>
@@ -49,11 +49,11 @@ const Contactscreen = () =>{
           </a>
           {/* Email */}
           <a href="mailto:eciainwebsite@gmail.com?subject=Course%20Registration%20Query&body=Hello,%20I%20have%20a%20question%20about%20the%20course." cursor="pointer">
-          <div className="flex gap-4 items-start mt-[20px]">
-          <img src="/Mail.png" alt="Email" className="w-[60px] mt-2 h-[60px]" />
+          <div className="flex gap-4 items-start ml-2 md:ml-0 mt-[20px]">
+          <img src="/Mail.png" alt="Email" className="w-[50px] h-[50px] md:w-[60px] mt-2 md:h-[60px]" />
           <div>
-            <h3 className="font-bold text-[20px] mt-[5px]">Email Us</h3>
-            <p className="text-[16px]">
+            <h3 className="font-bold text-[16px] md:text-[20px]  mt-[5px]">Email Us</h3>
+            <p className="text-[14px] md:text-[16px]">
              Supporteciateam@gmail.com
             </p>
           </div>
@@ -61,11 +61,11 @@ const Contactscreen = () =>{
           </a>
           {/* Call */}
           <a href="tel:+919159873818" cursor="pointer">
-          <div className="flex gap-4 items-start mt-[20px]">
-          <img src="/call.png" alt="call" className="w-[60px] mt-2 h-[60px]" />
+          <div className="flex gap-4 ml-2 md:ml-0 items-start mt-[20px]">
+          <img src="/call.png" alt="call" className="w-[50px] h-[50px] md:w-[60px] mt-2 md:h-[60px]" />
           <div>
-            <h3 className="font-bold text-[20px] mt-[5px]">Call Us</h3>
-            <p className="text-[16px]">
+            <h3 className="font-bold text-[16px] md:text-[20px]  mt-[5px]">Call Us</h3>
+            <p className="text-[14px] md:text-[16px]">
               phone:+91 9159873818
             </p>
           </div>
@@ -74,10 +74,10 @@ const Contactscreen = () =>{
           {/* Divider */}
       <div className="border-t border-[#0a0908]/30 w-[295px]   mt-[50px]"></div>
        {/* Title */}
-      <h3 className="font-bold mb-4 mt-[20px] text-[24px] mx-[15px]">Follow our social media</h3>
+      <h3 className="font-bold mb-2 md:mb-4 mt-[20px] text-[20px] ml-[45px] md:ml-0 md:text-[24px] mx-[15px]">Follow our social media</h3>
 
       {/* Icons */}
-      <div className="flex flex-row gap-1 ml-[20px]">
+      <div className="flex flex-row md:gap-1 mb-5 md:mb-0 ml-[70px] md:ml-[20px]">
       <div className=" text-white">
        <a
   href={`https://wa.me/919994508321?text=${text}`}
@@ -86,7 +86,7 @@ const Contactscreen = () =>{
   style={{ cursor: "pointer" }}
 >
  
-          <img src="Whatsapp.png" alt="whatsapp" className="h-[40px] h-[40px] ml-4" />
+          <img src="Whatsapp.png" alt="whatsapp" className=" h-[30px] md:h-[40px] " />
         </a>
       </div>
        <div className=" text-white">
@@ -94,7 +94,7 @@ const Contactscreen = () =>{
           href="#"
        
         >
-          <img src="LinkedIn.png" alt="LinkedIn" className="h-[40px] h-[40px] ml-4" />
+          <img src="LinkedIn.png" alt="LinkedIn" className=" h-[30px] md:h-[40px] ml-4" />
         </a>
       </div>
        <div className=" text-white">
@@ -102,7 +102,7 @@ const Contactscreen = () =>{
           href="#"
        
         >
-          <img src="FB.png" alt="whatsapp" className="h-[40px] h-[40px] ml-4" />
+          <img src="FB.png" alt="whatsapp" className=" h-[30px] md:h-[40px] ml-4" />
         </a>
       </div>
        <div className=" text-white">
@@ -110,7 +110,7 @@ const Contactscreen = () =>{
           href="#"
        
         >
-          <img src="Instagram.png" alt="whatsapp" className="h-[40px] h-[40px] ml-4" />
+          <img src="Instagram.png" alt="whatsapp" className=" h-[30px] md:h-[40px] ml-4" />
         </a>
         </div>
       </div>
@@ -119,7 +119,7 @@ const Contactscreen = () =>{
        <ContactForm />
       </div>
       <div>
-        <h1  className=" md:text-[40px] text-[#0367fc] mt-[1380px] text-center font-bold mb-[50px] md:mt-[670px]">Location</h1>
+        <h1  className=" text-[40px] md:text-[40px] text-[#0367fc] mt-[1140px] md:mt-[580px] text-center font-bold mb-[50px] md:mt-[670px]">Location</h1>
        <Mapscreen />
        </div>
        <Footer />

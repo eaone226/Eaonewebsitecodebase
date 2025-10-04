@@ -116,14 +116,14 @@ const ContactForm = () => {
   }}/>
       <form
         onSubmit={sendEmail}
-        className="bg-[#0a0908]/10 rounded-r-[30px] mt-[20px] md:mt-0 w-full ml-0 md:ml-[50px]"
+        className="md:bg-[#0a0908]/10  bg-[#0a0908]/20  rounded-b-[30px] md:rounded-none md:rounded-l-0 md:rounded-r-[30px] border-4 border-[#0a0908]/10 border-t-0 md:border-none md:mt-0 w-full ml-0 md:ml-[50px]"
       >
-        <h1 className="text-[#0367fc] md:text-[40px] mt-[30px] text-center mb-2 font-bold">
+        <h1 className="text-[#0367fc] text-[30px]  md:text-[40px] mt-[30px] md:mt-[30px] text-center mb-2 font-bold">
           Send us message
         </h1>
 
         {/* Name */}
-        <label className="font-bold md:ml-[90px] mt-[14px] text-[24px]">Name</label>
+        <label className="font-bold md:ml-[90px] mt-[14px] ml-[20px] text-[20px] md:text-[24px]">Name</label>
         <br />
         <input
           type="text"
@@ -131,20 +131,20 @@ const ContactForm = () => {
           value={formData.name}
           onChange={handleChange}
           name="name"
-          className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] pl-[20px] rounded-[10px] w-[331px] h-[50px]"
+          className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] pl-[20px] ml-[20px] rounded-[5px] md:rounded-[10px] w-[280px] h-[40px] md:w-[331px] md:h-[50px]"
           required
         />
         <br />
 
         {/* Phone Number */}
-        <label className="font-bold md:ml-[90px] mt-[20px] text-[24px] block">
+        <label className="font-bold md:ml-[90px] mt-[20px] ml-[20px] text-[20px] md:text-[24px] block">
           Phone Number
         </label>
         <div className="flex md:ml-[90px] mb-[20px] mt-[14px]">
           <select
             value={countryCode}
             onChange={(e) => setCountryCode(e.target.value)}
-            className="bg-[#f7f7f7] rounded-[10px] w-[75px] h-[50px] pl-3 pr-2 align-middle mr-4 cursor-pointer"
+            className="bg-[#f7f7f7] rounded-[5px] ml-5 md:ml-2 md:rounded-[10px] w-[60px] h-[40px] md:w-[75px] md:h-[50px] md:pl-3 md:pr-2 align-middle mr-4 cursor-pointer"
           >
             {codes.map((item, index) => (
               <option key={index} value={item.code}>
@@ -159,13 +159,13 @@ const ContactForm = () => {
             value={formData.phone}
             onChange={handleChange}
             name="phone"
-            className="bg-[#f7f7f7] pl-[20px] rounded-[10px] w-[240px] h-[50px]"
+            className="bg-[#f7f7f7] pl-[20px]  ml-1 md:ml-[10px] rounded-[5px] md:rounded-[10px] w-[200px] h-[40px] md:w-[240px] md:h-[50px]  "
             required
           />
         </div>
 
         {/* Email */}
-        <label className="font-bold md:ml-[90px] text-[24px]">Email</label>
+        <label className="font-bold md:ml-[90px] ml-[20px] text-[20px] md:text-[24px] ">Email</label>
         <br />
         <input
           type="email"
@@ -173,25 +173,25 @@ const ContactForm = () => {
           onChange={handleChange}
           name="email"
           placeholder="Ex:user@gmail.com"
-          className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] mb-[20px] pl-[20px] rounded-[10px] w-[331px] h-[50px]"
+          className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] mb-[20px] pl-[20px]  ml-[20px] rounded-[5px] md:rounded-[10px] w-[280px] h-[40px] md:w-[331px] md:h-[50px] "
           required
         />
 
         {/* Message */}
-        <label className="font-bold md:ml-[90px] text-[24px]">Message</label>
+        <label className="font-bold md:ml-[90px] ml-[20px] text-[20px] md:text-[24px] ">Message</label>
         <br />
         <textarea
           value={formData.message}
           onChange={handleChange}
           name="message"
           placeholder="Type your Message here...."
-          className="bg-[#f7f7f7] md:ml-[90px] mt-[14px] pl-[20px] pt-[10px] rounded-[10px] w-[331px] h-[100px]"
+          className="bg-[#f7f7f7] ml-[20px] md:ml-[90px] mt-[14px] pl-[20px] pt-[10px] rounded-[5px] w-[280px] h-[100px] md:rounded-[10px] md:w-[331px] md:h-[100px]"
           required
         />
 
         {/* Submit button */}
         <button
-          className="bg-[#0367fc] w-[331px] h-[50px] text-[24px] font-bold rounded-[10px] text-[#f7f7f7] flex items-center justify-center md:mx-[90px] mt-6 cursor-pointer hover:bg-[#0367fc]/80 active:scale-95 transition-all duration-150"
+          className="bg-[#0367fc]  ml-[100px] w-[120px] h-[40px] md:w-[331px] md:h-[50px] text-[24px] font-bold rounded-[5px] md:rounded-[10px] text-[#f7f7f7] flex items-center justify-center md:mx-[90px] mt-6 mb-6 md:mb-0 cursor-pointer hover:bg-[#0367fc]/80 active:scale-95 transition-all duration-150"
           type="submit"
           disabled={loading}
         >
