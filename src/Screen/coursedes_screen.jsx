@@ -61,7 +61,7 @@ const Coursedesc_screeen = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-[#0367fc] w-[120px] md:w-[178px] h-[40px] md:h-[55px] rounded-[6px] md:rounded-[10px] text-[18px] sm:text-[20px] lg:text-[24px] font-bold text-[#f7f7f7] mt-[20px]">
+              <button className="bg-[#0367fc] w-[120px] md:w-[178px] h-[40px] md:h-[55px] rounded-[6px] md:rounded-[10px] text-[18px] sm:text-[20px] lg:text-[24px] font-bold text-[#f7f7f7] mt-[20px] cursor-pointer">
                 Enroll now
               </button>
             </a>
@@ -88,7 +88,7 @@ const Coursedesc_screeen = () => {
 
         {/* Course Info Row */}
         <div className="flex justify-center mt-10">
-          <div className="flex flex-col sm:flex-row bg-[#0367fc] font-bold items-start sm:items-center px-4 sm:px-[20px] text-[#f7f7f7] py-4 sm:h-[60px] rounded-md w-full sm:w-[90%] lg:w-[900px] gap-2 sm:gap-6">
+          <div className="flex flex-col sm:flex-row bg-[#0367fc] font-bold items-start sm:items-center px-4 sm:px-[20px] text-[#f7f7f7] py-4 sm:h-[60px] rounded-md w-full sm:w-[90%] lg:w-[805px] gap-2 sm:gap-6">
             <h1 className="text-[16px] sm:text-[20px]">
               <span className="text-[#d2f801] font-black text-[20px] sm:text-[24px]">
                 Duration
@@ -209,7 +209,7 @@ const Coursedesc_screeen = () => {
         </h2>
         <div className="flex flex-col max-w-3xl mx-auto shadow-lg rounded-2xl bg-[#f7f7f7]">
           {faqsData.map((faq, index) => (
-            <div key={index} className="border-b border-b-gray-300">
+            <div key={index} className="border-b border-b-[#0a0908]/10 last:border-b-0">
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 text-[16px] sm:text-[18px] lg:text-[20px] font-semibold"

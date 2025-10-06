@@ -157,8 +157,14 @@ const ContactForm = () => {
             type="text"
             placeholder="Phone"
             value={formData.phone}
-            onChange={handleChange}
             name="phone"
+              onChange={(e) => {
+                 const onlyNums = e.target.value.replace(/\D/g, ""); // Remove non-digits
+                     if (onlyNums.length <= 10) {
+                       handleChange({ target: { name: "phone", value: onlyNums } });
+                     }
+                   }}
+            maxLength={10}
             className="bg-[#f7f7f7] pl-[20px]  ml-1 md:ml-[10px] rounded-[5px] md:rounded-[10px] w-[200px] h-[40px] md:w-[240px] md:h-[50px]  "
             required
           />
