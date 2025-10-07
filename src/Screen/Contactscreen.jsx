@@ -33,7 +33,7 @@ const Contactscreen = () =>{
       <div className=" bg-[#f7f7f7] z-10 inset-0 mt-[800px] md:mt-[300px]  md:pl-[94px] absolute md:w-[1040px] mx-[20px] md:mx-[110px]   md:rounded-[30px] shadow-lg md:h-[708px] flex flex-col md:flex-row justify-center"  >
         <div className="bg-[#f7f7f7] border-4 border-[#0a0908]/10 md:border-none border-b-0 rounded-t-[10px]  md:bg-[#f7f7f7] md:bg-transparent">
         <h1 className="text-[#0367fc] text-center text-[30px] md:text-[40px] mt-[30px] mb-2 font-bold">Get in Touch</h1>
-        <p className="md:w-[354px] ml-4 md:ml-0 text-[14px] md:text-[20px]">We're always happy to hear from you. Whether you have a question, feedback feel free to ask</p>
+        <p className="md:w-[354px] ml-4 md:ml-0 text-[14px] md:text-[20px]">We're always happy to hear from you. Whether you have a question, feedback feel free to ask.</p>
            {/* Head Office */}
            <a href="#Map" cursor="pointer">
         <div className="flex gap-4 items-start ml-5 md:ml-0 mt-[20px]">
@@ -48,13 +48,13 @@ const Contactscreen = () =>{
           </div>
           </a>
           {/* Email */}
-          <a href="mailto:eciainwebsite@gmail.com?subject=Course%20Registration%20Query&body=Hello,%20I%20have%20a%20question%20about%20the%20course." cursor="pointer">
+          <a href="mailto:ecia4website@gmail.com?subject=Course%20Registration%20Query&body=Hello,%20I%20have%20a%20question%20about%20the%20course." cursor="pointer">
           <div className="flex gap-4 items-start  ml-5 md:ml-0 mt-[20px]">
           <img src="/Mail.png" alt="Email" className="w-[50px] h-[50px] md:w-[60px] mt-2 md:h-[60px]" />
           <div>
             <h3 className="font-bold text-[16px] md:text-[20px]  mt-[5px]">Email Us</h3>
             <p className="text-[14px] md:text-[16px]">
-             Supporteciateam@gmail.com
+             ecia4you@gmail.com
             </p>
           </div>
           </div>
@@ -66,7 +66,7 @@ const Contactscreen = () =>{
           <div>
             <h3 className="font-bold text-[16px] md:text-[20px]  mt-[5px]">Call Us</h3>
             <p className="text-[14px] md:text-[16px]">
-              phone:+91 9159873818
+             +91 9994508321
             </p>
           </div>
           </div>
@@ -99,10 +99,10 @@ const Contactscreen = () =>{
       </div>
        <div className=" text-white">
         <a
-          href="#"
+          href="https://www.facebook.com/profile.php?id=61577226543640&mibextid=rS40aB7S9Ucbxw6v"
        
         >
-          <img src="FB.png" alt="whatsapp" className=" h-[40px] md:h-[40px] ml-4" />
+          <img src="FB.png" alt="fb" className=" h-[40px] md:h-[40px] ml-4" />
         </a>
       </div>
        <div className=" text-white">

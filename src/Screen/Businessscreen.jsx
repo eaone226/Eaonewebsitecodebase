@@ -71,7 +71,7 @@ const Businessscreen = () => {
             We are here to help you!
           </p>
           <h1 className="text-[20px] md:text-[64px] font-bold text-[#D2F801]">
-            Welcome to EAone
+            Welcome to ECIA
           </h1>
           <p className="text-[24px] ml-3 text-white md:w-[531px]">
             Transforming Ideas into Brands with Lasting Impact.

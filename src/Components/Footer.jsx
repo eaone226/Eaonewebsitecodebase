@@ -74,7 +74,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-[14px]">
               <img src="/Mail.png" alt="Mail" className="w-[24px] h-[24px]" />
-               <a href="mailto:eciainwebsite@gmail.com?subject=Course%20Registration%20Query&body=Hello,%20I%20have%20a%20question%20about%20the%20course." cursor="pointer" className="hover:text-[#0367fc]" target="_blank" rel="noopener noreferrer">
+               <a href="mailto:eciaforyou@gmail.com?subject=Course%20Registration%20Query&body=Hello,%20I%20have%20a%20question%20about%20the%20course." cursor="pointer" className="hover:text-[#0367fc]" target="_blank" rel="noopener noreferrer">
           
               Gmail
               </a>
