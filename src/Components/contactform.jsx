@@ -144,7 +144,7 @@ const ContactForm = () => {
           <select
             value={countryCode}
             onChange={(e) => setCountryCode(e.target.value)}
-            className="bg-[#f7f7f7] rounded-[5px] ml-5 md:ml-2 md:rounded-[10px] w-[60px] h-[40px] md:w-[75px] md:h-[50px] md:pl-3 md:pr-2 align-middle mr-4 cursor-pointer"
+            className="bg-[#f7f7f7] rounded-[5px] ml-5 md:ml-2 md:rounded-[10px] w-[60px] h-[40px] md:w-[75px] md:h-[50px] md:pl-4 md:pr-2 align-middle mr-4 cursor-pointer"
           >
             {codes.map((item, index) => (
               <option key={index} value={item.code}>

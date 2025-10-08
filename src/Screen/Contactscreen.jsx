@@ -86,7 +86,7 @@ const Contactscreen = () =>{
   style={{ cursor: "pointer" }}
 >
  
-          <img src="Whatsapp.png" alt="whatsapp" className=" h-[40px] md:h-[40px] " />
+          <img src="Whatsapp.png" alt="whatsapp" className=" h-[35px] md:h-[35px] " />
         </a>
       </div>
        <div className=" text-white">
@@ -94,7 +94,7 @@ const Contactscreen = () =>{
           href="#"
        
         >
-          <img src="LinkedIn.png" alt="LinkedIn" className=" h-[40px] md:h-[40px] ml-4" />
+          <img src="LinkedIn.png" alt="LinkedIn" className="  h-[35px] md:h-[35px] ml-2" />
         </a>
       </div>
        <div className=" text-white">
@@ -102,7 +102,7 @@ const Contactscreen = () =>{
           href="https://www.facebook.com/profile.php?id=61577226543640&mibextid=rS40aB7S9Ucbxw6v"
        
         >
-          <img src="FB.png" alt="fb" className=" h-[40px] md:h-[40px] ml-4" />
+          <img src="FB.png" alt="fb" className=" h-[35px] md:h-[35px] ml-2" />
         </a>
       </div>
        <div className=" text-white">
@@ -110,7 +110,15 @@ const Contactscreen = () =>{
           href="#"
        
         >
-          <img src="Instagram.png" alt="whatsapp" className=" h-[40px] md:h-[40px] ml-4" />
+          <img src="Instagram.png" alt="whatsapp" className="  h-[35px] md:h-[35px] ml-2" />
+        </a>
+        </div>
+         <div className=" text-white">
+        <a
+          href="https://www.behance.net/gallery/229571561/Branding-Service-Coaching"
+       
+        >
+          <img src="BEHANCE.png" alt="behance" className="  h-[35px] md:h-[35px] ml-2" />
         </a>
         </div>
       </div>
