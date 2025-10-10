@@ -43,7 +43,7 @@ const Features = () => {
                 ></span>
 
                 {/* Main Icon */}
-                <img src={card.icon} alt="icon" className="absolute mt-10 z-10" loading="lazy" />
+                <img src={card.icon} alt="icon" className="absolute mt-10 z-10" />
               </div>
 
               <h3 className="text-[24px] font-bold mt-[30px]">{card.title}</h3>

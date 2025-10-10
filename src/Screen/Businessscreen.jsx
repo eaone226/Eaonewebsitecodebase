@@ -105,7 +105,7 @@ const Businessscreen = () => {
       <div className="md:px-[120px] mb-[200px] mt-[80px]">
         <h2 className=" text-[36px] relative text-center md:text-left font-bold mb-[40px]">Client Testimonials</h2>
 
-        <img src="/Rocket.png" alt="rocket" className="absolute top-[3740px] md:top-[2986px] md:right-5 w-[621px] "   loading="lazy" />
+  <img src="/Rocket.png" alt="rocket" className="absolute top-[3740px] md:top-[2986px] md:right-5 w-[621px]" />
 
         <div>
           <div className="relative bg-[#0a0908]/5 md:h-[329px] rounded-[10px] mx-[20px] md:mx-0 flex flex-col w-[380px] md:w-full text-center">

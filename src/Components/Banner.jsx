@@ -22,7 +22,7 @@ const Banner = () => {
           alt="Banner"
           className="mt-8 md:mt-0 relative md:absolute md:-top-[156px] md:right-0 
                      h-48 sm:h-72 md:h-[400px] lg:h-[492px] object-contain"
-          loading="lazy"
+          
         />
       </div>
     </section>

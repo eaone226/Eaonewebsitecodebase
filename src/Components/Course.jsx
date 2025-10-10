@@ -38,12 +38,11 @@ const Courses = ({ showTitle = true, excludeId = null }) => {
                 }
             >
               {/* Image */}
-              <img
-                src={course.img}
-                alt={course.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                loading="lazy"
-              />
+                  <img
+                    src={course.img}
+                    alt={course.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
 
               {/* Overlay */}
               <div  className={`absolute inset-0 bg-black/70 transition-opacity duration-500 flex items-end 

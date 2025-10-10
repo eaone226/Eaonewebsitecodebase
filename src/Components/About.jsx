@@ -17,7 +17,6 @@ export default function AboutUs() {
                 src="/About.png"
                 alt="Team working together"
                 className="rounded-full w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 object-cover"
-                loading="lazy"
               />
               {/* Decorative dots */}
               <div className="absolute bottom-[220px] sm:bottom-[280px] md:bottom-[331px] left-[90px] sm:left-[115px] md:left-[136px] w-2 h-2 bg-[#0367fc] rounded-full"></div>

@@ -41,12 +41,11 @@ const Herosection = () => {
         </div>
 
         {/* Right Image */}
-        <img
-          src="Hero.png"
-          alt="Hero"
-          className="w-[200px] sm:w-[300px] md:w-[395px] md:ml-[138px] h-auto md:h-[518px] mt-[30px] md:mt-[20px]"
-          loading="lazy"
-        />
+          <img
+            src="Hero.png"
+            alt="Hero"
+            className="w-[200px] sm:w-[300px] md:w-[395px] md:ml-[138px] h-auto md:h-[518px] mt-[30px] md:mt-[20px]"
+          />
       </div>
     </section>
   );
