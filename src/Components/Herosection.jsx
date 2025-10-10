@@ -45,6 +45,7 @@ const Herosection = () => {
           src="Hero.png"
           alt="Hero"
           className="w-[200px] sm:w-[300px] md:w-[395px] md:ml-[138px] h-auto md:h-[518px] mt-[30px] md:mt-[20px]"
+          loading="lazy"
         />
       </div>
     </section>
