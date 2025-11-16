@@ -30,10 +30,10 @@ const Businessscreen = () => {
 
     emailjs
       .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,   // EmailJS Service ID
-        import.meta.env.VITE_EMAILJS_TEMPLATE_NEWSLETTER,  // EmailJS Template ID
+        "service_zg8oiob",   // EmailJS Service ID
+        "template_32c1n9b",  // EmailJS Template ID
         dataToSend,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // EmailJS Public Key
+        "xoOcarvys8r7P1H10" // EmailJS Public Key
       )
       .then(() => {
         toast.success("Email sent successfully!");
