@@ -61,10 +61,10 @@ const ContactForm = () => {
     // Send email to owner
     emailjs
       .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_OWNER,
+        "service_zg8oiob",
+        "template_owah7yf",
         dataToSend,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        "xoOcarvys8r7P1H10"
       )
       .then(() => console.log("Email sent to ecia"))
       .catch((err) => {
@@ -75,14 +75,14 @@ const ContactForm = () => {
     // Send thank-you email to user
     emailjs
       .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_USER,
+        "service_zg8oiob",
+        "template_32c1n9b",
         {
           name: dataToSend.name,
           email: dataToSend.email,
           phone: fullPhone,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        "xoOcarvys8r7P1H10"
       )
       .then(() => console.log("Thank-you email sent"))
       .catch((err) => {
@@ -91,12 +91,15 @@ const ContactForm = () => {
       });
 
     // Save to Google Sheets
-    fetch(import.meta.env.VITE_GOOGLE_SHEETS_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(dataToSend),
-    })
+    fetch(
+      "https://script.google.com/macros/s/AKfycbw4zK1fYsztDbIjzGbMoUWlF5TY4AWMUfftaSAptFzQ3TVJaSGDIyTB6mThG5KRVZwl/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend),
+      }
+    )
       .then(() => console.log("Saved to Google Sheets"))
       .catch((err) => console.error("Google Sheets error:", err));
   };
